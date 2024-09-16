@@ -54,12 +54,14 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             if(gameFinish){
-                tvInfo.setText(R.string.hit);
                 guess = (int) (Math.random() * 100);
+                bControl.setText(R.string.input_value);
                 gameFinish = false;
             }
             else {
                 if(guess == value) {
+                    tvInfo.setText(R.string.hit);
+                    bControl.setText(R.string.play_more);
                     gameFinish = true;
                     return;
                 }
